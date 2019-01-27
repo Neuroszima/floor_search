@@ -1,0 +1,42 @@
+/* following sidebar styling comes from a CSS tutorial on: */
+/* https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
+
+
+/* Style the sidebar - fixed full height */
+#menu {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+/* Style sidebar links */
+.menu_element_container {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.menu_element_container:hover {
+  color: #f1f1f1;
+}
+
+
+.menu_element_container.active {
+  color: lightseagreen;
+  background-color: darkslategray;
+}
+
+.element_index {
+  width: 100%;
+  background-color: #111111;
+  color: aqua;
+}

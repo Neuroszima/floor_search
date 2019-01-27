@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titleblock %}{% endblock %}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% block css %}
+    {% endblock %}
+    {% for css in styles %}
+        <link rel='stylesheet' href="{% static css %}">
+    {% endfor %}
+    {% block scripts %}
+    {% endblock %}
+    {% for script in scripts_wanted %}
+        <script src="{% static script %}"></script>
+    {% endfor %}
+    {# scripts and stylesheets from above are loaded with context processor #}
+    {# rest of them are hardcoded in respective templates and put in blocks #}
+</head>
+<body>
+{% include 'menu.html' %}
+<div class="main">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

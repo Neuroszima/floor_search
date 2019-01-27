@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block scripts %}
+    {% load static %}
+    <script src="{% static "js/rm_active_cls.js" %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#products').addClass('active')
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <form class="crawlerform">
+        <table>
+            {% include 'crawlerform.html' %}
+        </table>
+        <button class="buttonbtn">BUTT_ON</button>
+    </form>
+{% endblock %}

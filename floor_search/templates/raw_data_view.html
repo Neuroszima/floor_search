@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block scripts %}
+    {% load static %}
+    <script src="{% static "js/rm_active_cls.js" %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#raw').addClass('active')
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% for data in raw_data %}
+        <div class="element_index">
+            ID: {{ data.id }}
+        </div>
+        <p>Data download date:<br>
+        {{ data.date }}
+        </p>
+        <p>Contents:</p>
+        <P class="data">
+        {% for d in data.data_to_list %}
+            {{ d }} <br>
+        {% endfor %}
+        </P>
+    {% endfor %}
+{% endblock %}

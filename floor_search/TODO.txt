@@ -1,0 +1,24 @@
+In near future:
+
+1. Fix broken ajax, making improper logs in browser console
+2. Add a status of a work to crawler_view.html, to show if the job started is
+    running still, or finished
+3. Make a little bit more flexible spider, to search for html elements, by either
+    css selectors, or Xpath
+
+Later on:
+
+1. Process data extracted by spider, to basic model structure already present in "scrappy"
+    app, propably along creating new app
+2. One of two:
+    2.1 Making more single task spiders which could cover other search tasks, with a "select"
+        field in form, to choose one of the list from Scrapyd-API using interface method "list_spiders"
+    2.2 Making existing spider more flexible, at the same time extending form so more detailed
+        info can be passed to scheduler
+3. Get to know scrapy framework better...
+
+Other features:
+
+1. Microsoft Excel reports for buisness
+2. Login permission limits for users to limit access to spider page and api
+3. More detailed models of surface to include: floor elements, norms, etc.

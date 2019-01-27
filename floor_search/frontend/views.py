@@ -12,7 +12,7 @@ class MainView(View):
 
 class SpiderFormView(View):
     def get(self, request):
-        return render(request, 'crawlerform.html')
+        return render(request, 'crawler_view.html')
 
 
 class RawDataView(View):
